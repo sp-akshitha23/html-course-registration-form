@@ -1,0 +1,121 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Online Course Registration</title>
+ </head>
+ <body>
+ <main>
+    <header style='text-align:center'>
+          <h1>Online Course Registration</h1>
+    </header>
+    <form action="submit-form.php" method='post'>
+    <section>
+      
+        <fieldset>
+        
+            <legend>Personal Information</legend>
+          
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required><br><br>
+            <label for="mail">Email</label><br>
+            <input type="email" id="mail" name="email"  autocomplete="email" pattern=".+@gmail\.com"  placeholder="Enter email" required><br><br>
+             <label for="pwd">Password</label><br>
+            <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password" required><br><br>
+             <label for="phn">Phone No.</label><br>
+            <input type="tel" id="phn" name="phn_no" inputmode="numeric"  pattern="[0-9]{10}"  placeholder="Enter phone number" required><br><br>
+             <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+            
+        </fieldset>
+    </section>
+    <section>
+          <fieldset>
+            <legend>Address</legend>
+            
+            <label for="sa">Street Address</label><br>
+            <input type="text" id="sa" name="streetadd" placeholder="Enter street address" required><br><br>
+            <label for="city">City</label><br>
+            <select id="city" name="city">
+                <option value="">Select City</option>
+                <option value="hyd">Hyderabad</option>
+                <option value="bng">Bangalore</option>
+                <option value="chennai">Chennai</option>
+            </select><br><br>
+             <label for="state">State</label><br>
+             <select id="state" name="state">
+                <option value="">Select State</option>
+                <option value="tel">Telangana</option>
+                <option value="krn">Karnataka</option>
+                <option value="tml">Tamil Nadu</option>
+            </select><br><br>
+             <label for="pin">Pin Code</label><br>
+            <input type="text" id="pin" name="pin_code"  pattern="^\d{6}$"   placeholder="Enter pincode" required><br><br>
+           
+        </fieldset>
+    </section>
+    <section>
+       
+          <fieldset>
+          <legend>Course Selection</legend>
+          <input type="radio" id="wb" name="course" value="webdev">
+          <label for="wb">Web Development</label><br>
+          <input type="radio" id="pp" name="course" value="python">
+          <label for="pp">Python Programming</label><br>
+          <input type="radio" id="jp" name="course" value="java">
+          <label for="jp">Java Programming</label><br>
+          <input type="radio" id="ds" name="course" value="data science">
+          <label for="ds">Data Science</label><br>
+          <h4>Learning Mode</h4>
+           <input type="radio" id="on" name="learn_mode" value="online">
+          <label for="on">Online</label><br>
+          <input type="radio" id="off" name="learn_mode" value="offline">
+          <label for="off">Offline</label><br>
+          <input type="radio" id="hy" name="learn_mode" value="hybrid">
+          <label for="hy">Hybrid</label><br>
+          </fieldset>
+          <section>
+             <fieldset>
+             <legend>Skill Selection</legend>
+            <input type="checkbox" id="html" name="skill" value="html">
+          <label for="html">HTML</label><br>
+          <input type="checkbox" id="css" name="skill" value="css">
+          <label for="css">CSS</label><br>
+          <input type="checkbox" id="js" name="skill" value="js">
+          <label for="js">JavaScript</label><br>
+     
+          <input type="checkbox" id="python" name="skill" value="python">
+          <label for="python">Python</label><br>
+          <input type="checkbox" id="java" name="skill" value="java">
+          <label for="java">Java</label><br>
+     
+          </fieldset>
+          </section>
+           <section>
+       
+               <label for="knew"> Basic skills already known</label><br>
+               <input list="knew" id="knew" name="knew"><br>
+               <datalist id="knew">
+                    <option value="html">Html</option>
+                    <option value="css">Css</option>
+                    <option value="js">JavaScript</option>
+                    <option value="react">React</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+               </datalist>
+           </section>
+    </section>
+    <label for="fb">Why do you want to join this course</label><br>
+    <textarea id="fb" name="feedback"  rows="4" cols="50"></textarea><br>
+    <div>
+    <button type="reset">Reset</button><br>
+    <button type="submit">Submit</button>
+    </div>
+    </form>
+    
+ </main>
+ <footer>
+  <p>© S P AKSHITHA</p>
+ </footer>
+ </body>
+ </html>
